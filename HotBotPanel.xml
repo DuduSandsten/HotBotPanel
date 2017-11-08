@@ -1,0 +1,209 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">	
+	<Frame name="HotBotPanel" enableMouse="true" movable="true">
+			<Scripts>
+				<OnLoad>
+					this:RegisterForDrag("RightButton")
+					HotBotPanel_OnLoad()
+				</OnLoad>
+				<OnDragStart>this:StartMoving();</OnDragStart>
+				<OnDragStop>this:StopMovingOrSizing();</OnDragStop>
+								
+				
+			</Scripts>
+			
+			<Anchors>
+				<Anchor point="TOP" relativeTo="PVPArenaTextString" relativePoint="BOTTOM" />
+			</Anchors>
+			
+			<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+			edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+				<BackgroundInsets>
+					<AbsInset left="11" right="12" top="12" bottom="11"/>
+				</BackgroundInsets>
+				<TileSize>
+					<AbsValue val="32"/>
+				</TileSize>
+				<EdgeSize>
+					<AbsValue val="32"/>
+				</EdgeSize>
+			</Backdrop>
+			
+			<Size>
+				<AbsDimension x="256" y="40"/>
+			</Size>
+        <Layers>
+          <Layer level="ARTWORK">
+            <FontString inherits="GameFontNormal" text="HotBot Panel">
+              <Anchors>
+                <Anchor point="TOPLEFT" >
+                  <Offset>
+                    <AbsDimension x="10" y="0"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+        </Layers>
+			
+			
+		<Frames>
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="1">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="20" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(1);
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="2">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="40" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(2);
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="3">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="60" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(3);
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="4">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="80" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(4);
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="5">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="100" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(5);
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="6">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="120" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(6);
+					</OnClick>
+				</Scripts>
+			</Button>
+
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="7">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="140" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(7);
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="8">
+				<Size x="20" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="160" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_HotGroup(8);
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+			<Button name="$parentButton" inherits="UIPanelButtonTemplate" text="Rank">
+				<Size x="35" y="20"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" >
+						<Offset>
+							<AbsDimension x="200" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HotBot_SelectRank();
+					</OnClick>
+				</Scripts>
+			</Button>
+			
+		</Frames>
+
+			
+		
+		<GameTooltip name="HotBotPanel_Tooltip" hidden="true" inherits="GameTooltipTemplate">
+			<Scripts>
+				<OnLoad>
+					this:SetOwner(this, "ANCHOR_NONE");
+				</OnLoad>
+			</Scripts>
+		</GameTooltip>
+		
+	</Frame>
+
+</Ui>

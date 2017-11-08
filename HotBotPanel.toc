@@ -1,0 +1,8 @@
+## Interface: 20000
+## Title: HotBot panel by Sandsten
+## Notes: Just a temporary workaround for hotbot spamming
+## Author: Sandsten https://nirklars.wordpress.com/wow/
+## Dependencies:
+## SavedVariables: HotBotPanel
+HotBotPanel.lua
+HotBotPanel.xml
